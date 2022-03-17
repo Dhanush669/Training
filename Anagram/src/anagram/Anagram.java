@@ -9,7 +9,9 @@ public class Anagram {
         String s1;
         int count=0,siz;
         Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string");
         s1=sc.next();
+        System.out.println("enter the number of strings you want to get");
         siz=sc.nextInt();
         for(int i=0;i<siz;i++){
             String s2=sc.next();
