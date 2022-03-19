@@ -10,7 +10,6 @@ public class Palindrome {
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
         System.out.println(getPalindrome(str));
-        
     }
     
     public static String getPalindrome(String str){
@@ -21,12 +20,10 @@ public class Palindrome {
                 int cou=0;
                 while(t.length()>0){
                     cou++;
-                    //System.out.println(t+" "+i);
                     if(i>t.length()){
                         break;
                     }
                     String te=t.substring(0,i);
-                    //System.out.println(te);
                     
                     if(isPalindrome(str+te)){
                         return str+te;
