@@ -47,7 +47,7 @@ public class CountFactors {
         if(root==null){
             return 0;
         }
-        if(search(tree,root,k/root.data)){
+        if(root.data!=0 && search(tree,root,k/root.data)){
             root.data=0;
             count++;
         }

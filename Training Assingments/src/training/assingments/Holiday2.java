@@ -4,12 +4,12 @@
  */
 package training.assingments;
 
-class Holiday {
+class Holidays {
     private String name;
     private int day;
     private String month;
 
-    Holiday(String name,int day,String month){
+    Holidays(String name,int day,String month){
         this.name=name;
         this.day=day;
         this.month=month;
@@ -24,15 +24,15 @@ class Holiday {
 
 public class Holiday2 {
     public static void main(String[] args){
-        Holiday h1=new Holiday("Dhanush",12,"March");
-        Holiday h2=new Holiday("Dhanush",7,"March");
-        Holiday h3=new Holiday("Dhanush",13,"March");
-        Holiday h4=new Holiday("Dhanush",15,"March");
-        Holiday h_array[]={h1,h2,h3,h4};
+        Holidays h1=new Holidays("Dhanush",12,"March");
+        Holidays h2=new Holidays("Dhanush",7,"March");
+        Holidays h3=new Holidays("Dhanush",13,"March");
+        Holidays h4=new Holidays("Dhanush",15,"March");
+        Holidays h_array[]={h1,h2,h3,h4};
         System.out.println(avg(h_array));
     }
     
-    public static double avg(Holiday h[]){
+    public static double avg(Holidays h[]){
 	    int tot=0;
 	    for(int i=0;i<h.length;i++){
 	        tot+=h[i].getD();
