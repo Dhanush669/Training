@@ -24,7 +24,7 @@ public class BalancingBrackets {
               
             }
             else{
-                System.out.println("Not possible");
+                System.out.println(addExtra(str,str));
             }
             
         }
@@ -56,23 +56,44 @@ public class BalancingBrackets {
     }
     
     public static String addExtra(String str,String t){
+        String res="";
         for(int i=0;i<t.length();i++){
             switch (t.charAt(i)) {
                 case '(':
-                    if(!t.contains(")")){
-                        str=t.substring(0,i+1)+")"+t.substring(i+1);
-                    }   break;
+                    //if(!t.contains(")")){
+                        //res+=t.substring(0,i+1)+")"+t.substring(i+1);
+                    res+="()";
+                       break;
                 case '{':
-                    str=t.substring(0,i+1)+"}"+t.substring(i+1);
+                    //if(!t.contains("}")){
+                    //res+=t.substring(0,i+1)+"}"+t.substring(i+1);
+                    res+="{}";
                     break;
                 case '[':
-                    str=t.substring(0,i+1)+"]"+t.substring(i+1);
+                    //if(!t.contains("]")){
+                    //res+=t.substring(0,i+1)+"]"+t.substring(i+1);
+                    res+="[]";
+                    break;
+                case ')':
+                    //if(!t.contains("(")){
+                        //res+=t.substring(0,i)+"("+t.substring(i);
+                    res+="()";
+                       break;
+                case '}':
+                    //if(!t.contains("{")){
+                    //res+=t.substring(0,i)+"{"+t.substring(i);
+                    res+="{}";
+                    break;
+                case ']':
+                    //if(!t.contains("[")){
+                    //res+=t.substring(0,i)+"["+t.substring(i);
+                    res+="[]";
                     break;
                 default:
                     break;
             }
         }
-        return str;
+        return res;
     }
     
     public static void set(String str){
