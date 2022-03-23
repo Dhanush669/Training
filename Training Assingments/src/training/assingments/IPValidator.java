@@ -14,6 +14,11 @@ public class IPValidator {
     public static boolean ValidateIpv4Address(String ip) {
         String[] ipv4=ip.split("\\.");
         String last=ipv4[ipv4.length-1];
+        for(char c:ip.toCharArray()){
+            if(!Character.isDigit(c)){
+                return false;
+            }
+        }
         if(ipv4.length!=4 || ipv4[ipv4.length-1].equals("255") || ipv4[ipv4.length-1].charAt(last.length()-1)=='0'){
             return false;
         }
