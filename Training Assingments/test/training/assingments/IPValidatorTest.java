@@ -16,8 +16,8 @@ public class IPValidatorTest {
     @Test
     public void testValidateIpv4Address() {
         
-        assertTrue(IPValidator.ValidateIpv4Address("192.168.1.1"));
-        assertFalse(IPValidator.ValidateIpv4Address("192.168.1"));
+        assertTrue(IPValidator.ValidateIpv4Address("192.168.1.10"));
+        assertFalse(IPValidator.ValidateIpv4Address("192.168.1.1"));
         
     }
     

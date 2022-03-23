@@ -13,7 +13,8 @@ public class IPValidator {
 
     public static boolean ValidateIpv4Address(String ip) {
         String[] ipv4=ip.split("\\.");
-        if(ipv4.length!=4 || ipv4[ipv4.length-1].equals("255") || ipv4[ipv4.length-1].equals("0")){
+        String last=ipv4[ipv4.length-1];
+        if(ipv4.length!=4 || ipv4[ipv4.length-1].equals("255") || ipv4[ipv4.length-1].charAt(last.length()-1)=='0'){
             return false;
         }
         
