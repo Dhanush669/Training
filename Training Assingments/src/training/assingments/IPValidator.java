@@ -15,7 +15,7 @@ public class IPValidator {
         String[] ipv4=ip.split("\\.");
         String last=ipv4[ipv4.length-1];
         for(char c:ip.toCharArray()){
-            if(!Character.isDigit(c)){
+            if(c!='.' && !Character.isDigit(c)){
                 return false;
             }
         }
