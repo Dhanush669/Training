@@ -4,12 +4,14 @@
  */
 package unitsconvertor;
 
+import unitsconvertor.ModelLength.CentiMeter.UnitValidateHelperCmToCm;
+
 
 public class UnitsValidator {
 
     public static void main(String[] args) {
         
-        
+        System.out.println(UnitValidateHelperCmToCm.checkCentiMeterToCentiMeter("1", "1"));
     }
     
     
